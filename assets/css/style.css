@@ -168,7 +168,7 @@ main section article {
 .card figcaption {
     position: absolute;
     left: 10px;
-    bottom: 25px;
+    bottom: 10px;
     z-index: 2;
     background-color: var(--primary-extralight);
     padding: 10px;
