@@ -1,0 +1,73 @@
+:root {
+  --primary: #145da7;
+  --primary-dark:#0f3b68;
+  --primary-light:#1e90ff;
+  --primary-text:#fdfdfd;
+  --secondary: #8b3939;
+  --secondary-dark: #502222;
+  --secondary-light:#fd6868;
+  --secondary-text:#8b3939;
+  --rainbow:linear-gradient(to right,red,orange,yellow,green,blue,violet);
+  --navwidth: 30vh;
+  --headerheight:45px;
+  --hero-height:300px;
+}
+
+* {
+  margin:0;
+  padding:0;
+  outline: none;  
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  position:sticky;
+  Top:0;
+  height: var(--headerheight);
+  background-color: var(--primary-dark);
+  display:flex;
+  color:var(--primary-text);
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex:1;
+  height: auto;
+}
+.hero {
+  height: var(--hero-height);
+  background:url(../images/blue-background.jpg);
+  background-size: stretch;
+  background-position: 100% 100%;
+  /* background-size: 100% auto  ; */
+}
+nav {
+  position:sticky;
+  top: var(--headerheight);
+  width: var(--navwidth);
+  background-color: var(--primary-light);
+  height: calc(100vh - var(--headerheight));
+  align-self: flex-start;
+}
+main {
+  background-color: var(--secondary);
+  display:flex;
+  flex:1;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+      flex-direction: column;
+  }
+  nav {
+      align-self: start;
+      width: 100%;
+      height: auto;
+      flex:1;
+  }
+  
+}
